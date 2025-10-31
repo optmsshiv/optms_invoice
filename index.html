@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,29 +12,33 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 
-<!-- Login Card -->
-<div class="container">
-    <div class="card">
-        <div class="header">Sign in with</div>
+    <!-- Login Card -->
+    <div class="container">
+        <div class="card">
+            <div class="header">Sign in with</div>
 
-        <div class="oauth-container">
-            <button class="oauth-btn"><img src="assets/images/github.svg" alt="GitHub">GitHub</button>
-            <button class="oauth-btn"><img src="assets/images/google.svg" alt="Google">Google</button>
+            <div class="oauth-container">
+                <button class="oauth-btn"><img src="assets/images/github.svg" alt="GitHub">GitHub</button>
+                <button class="oauth-btn"><img src="assets/images/google.svg" alt="Google">Google</button>
+            </div>
+
+
+
+            <form>
+                <div class="form-group"><label for="email">Email</label><input type="email" id="email"
+                        placeholder="Email"></div>
+                <div class="form-group"><label for="password">Password</label><input type="password" id="password"
+                        placeholder="Password"></div>
+                <div class="checkbox-container"><input type="checkbox" id="remember"><label for="remember">Remember
+                        me</label></div>
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
         </div>
-
-        
-
-        <form>
-            <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="Email"></div>
-            <div class="form-group"><label for="password">Password</label><input type="password" id="password" placeholder="Password"></div>
-            <div class="checkbox-container"><input type="checkbox" id="remember"><label for="remember">Remember me</label></div>
-            <button type="submit" class="submit-btn">Sign In</button>
-        </form>
     </div>
-</div>
-
 
 </body>
+
 </html>
