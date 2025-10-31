@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFix | Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="login-container">
+    <h2>Sign In</h2>
+
+    <form action="login.php" method="POST">
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="remember">
+            <input type="checkbox" name="remember"> Remember me
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <p><a href="#">Forgot password?</a></p>
+    <p><a href="#">Create new account</a></p>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
