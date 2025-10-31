@@ -1,0 +1,269 @@
+/* ========================================
+   1. GLOBAL RESET & FONT
+   ======================================== */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   background-color: #0f172a;
+   background-image: url('/assets/images/register_bg_2.png');
+   color: #e2e8f0;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   background-size: 1670px;
+}
+
+/* -------------------------------------------------
+   3. DARK OVERLAY (now UNDER the content)
+   ------------------------------------------------- */
+body::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(51, 59, 95, 0.167);
+   /* adjust opacity if needed */
+   z-index: 1;
+   /* BELOW content */
+}
+
+/* -------------------------------------------------
+   4. CONTENT ABOVE OVERLAY
+   ------------------------------------------------- */
+.container,
+.top-nav,
+.footer,
+.decor {
+   position: relative;
+   z-index: 10;
+}
+
+/* -------------------------------------------------
+   6. LOGIN CARD
+   ------------------------------------------------- */
+.container {
+   width: 100%;
+   max-width: 400px;
+   padding: 0 1rem;
+}
+
+.card {
+   background: rgba(255, 255, 255, 0.9);
+   /* 15% opacity white */
+   border-radius: .75rem;
+   padding: 2rem;
+   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .1),
+      0 4px 6px -2px rgba(0, 0, 0, .05);
+   color: #ffffff;
+   /* Change text to white for contrast */
+   backdrop-filter: blur(10px);
+   /* Optional: glass effect */
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   /* Optional: subtle border */
+}
+.card::before {
+content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(6, 34, 107, 0.153);
+   /* adjust opacity if needed */
+   z-index: -1;
+   /* BELOW content */
+}
+
+.header {
+   text-align: center;
+   margin-bottom: 1.5rem;
+   font-size: .875rem;
+   color: #64748b;
+   font-weight: 500;
+}
+
+/* OAuth */
+.oauth-container {
+   display: flex;
+   gap: .75rem;
+   margin-bottom: 1.5rem;
+}
+
+.oauth-btn {
+   flex: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: .5rem;
+   padding: .5rem 1rem;
+   border: 1px solid #e2e8f0;
+   border-radius: .375rem;
+   background: #fff;
+   font-size: .875rem;
+   font-weight: 500;
+   color: #1e293b;
+   cursor: pointer;
+   transition: all .2s;
+}
+
+.oauth-btn:hover {
+   border-color: #cbd5e1;
+   background: #f8fafc;
+}
+
+.oauth-btn img {
+   width: 18px;
+   height: 18px;
+}
+
+/* Divider */
+.divider {
+   text-align: center;
+   margin: 1.5rem 0;
+   position: relative;
+   font-size: .875rem;
+   color: #94a3b8;
+}
+
+.divider::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 0;
+   right: 0;
+   height: 1px;
+   background: #e2e8f0;
+}
+
+.divider span {
+   background: #f8fafc;
+   padding: 0 .75rem;
+}
+
+/* Form */
+.form-group {
+   margin-bottom: 1rem;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: .5rem;
+   font-size: .875rem;
+   font-weight: 500;
+   color: #475569;
+   text-transform: uppercase;
+   letter-spacing: .05em;
+}
+
+.form-group input {
+   width: 100%;
+   padding: .75rem 1rem;
+   border: 1px solid #e2e8f0;
+   border-radius: .375rem;
+   font-size: 1rem;
+   color: #1e293b;
+   transition: border-color .2s;
+}
+
+.form-group input:focus {
+   outline: none;
+   border-color: #3b82f6;
+   box-shadow: 0 0 0 3px rgba(59, 130, 246, .1);
+}
+
+/* Checkbox */
+.checkbox-container {
+   display: flex;
+   align-items: center;
+   gap: .5rem;
+   margin-bottom: 1.5rem;
+   font-size: .875rem;
+   color: #64748b;
+}
+
+.checkbox-container input {
+   width: 1rem;
+   height: 1rem;
+   accent-color: #3b82f6;
+}
+
+.checkbox-container label {
+   cursor: pointer;
+}
+
+/* Submit */
+.submit-btn {
+   width: 100%;
+   padding: .75rem;
+   background: #1e293b;
+   color: #fff;
+   font-weight: 600;
+   font-size: 1rem;
+   border: none;
+   border-radius: .375rem;
+   cursor: pointer;
+   transition: background .2s;
+}
+
+.submit-btn:hover {
+   background: #0f172a;
+}
+
+/* -------------------------------------------------
+   7. NAV & FOOTER
+   ------------------------------------------------- */
+.top-nav {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 1rem 2rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #cbd5e1;
+   font-size: .875rem;
+}
+
+.logo {
+   font-weight: 700;
+   font-size: 1.125rem;
+   color: #e2e8f0;
+}
+
+.nav-right {
+   display: flex;
+   align-items: center;
+   gap: 1.5rem;
+}
+
+.social-links {
+   display: flex;
+   gap: 1rem;
+}
+
+.social-links a {
+   color: #94a3b8;
+   transition: color .2s;
+}
+
+.social-links a:hover {
+   color: #cbd5e1;
+}
+
+.download-btn {
+   background: rgba(255, 255, 255, .1);
+   padding: .5rem 1rem;
+   border-radius: .375rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: .75rem;
+   letter-spacing: .05em;
+   color: #e2e8f0;
+   text-decoration: none;
+}
+
+

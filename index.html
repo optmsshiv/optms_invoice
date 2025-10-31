@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastFix | Login</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Tailwind Starter Kit - Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-<div class="login-container">
-    <h2>Sign In</h2>
 
-    <form action="login.php" method="POST">
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Enter your email" required>
-        </div>
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password" placeholder="Enter your password" required>
-        </div>
-        <div class="remember">
-            <input type="checkbox" name="remember"> Remember me
-        </div>
-        <button type="submit">Login</button>
-    </form>
+<!-- Login Card -->
+<div class="container">
+    <div class="card">
+        <div class="header">Sign in with</div>
 
-    <p><a href="#">Forgot password?</a></p>
-    <p><a href="#">Create new account</a></p>
+        <div class="oauth-container">
+            <button class="oauth-btn"><img src="assets/images/github.svg" alt="GitHub">GitHub</button>
+            <button class="oauth-btn"><img src="assets/images/google.svg" alt="Google">Google</button>
+        </div>
+
+        
+
+        <form>
+            <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="Email"></div>
+            <div class="form-group"><label for="password">Password</label><input type="password" id="password" placeholder="Password"></div>
+            <div class="checkbox-container"><input type="checkbox" id="remember"><label for="remember">Remember me</label></div>
+            <button type="submit" class="submit-btn">Sign In</button>
+        </form>
+    </div>
 </div>
-<script src="assets/js/main.js"></script>
+
+<!-- Footer 
+<div class="footer">
+    <div>Copyright © 2019 Creative Tim</div>
+    <div class="footer-links">
+        <a href="#">Creative Tim</a>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">MIT License</a>
+    </div>
+</div>-->
+
 </body>
 </html>
